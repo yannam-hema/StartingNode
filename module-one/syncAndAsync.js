@@ -1,12 +1,3 @@
-// const {subtract,divide}=require('./module-one/index');
-import fs from 'fs';
-
-// console.log(subtract(10, 5)); 
-// console.log(divide(10, 2));
-
-
-
-
 let a = 10;
 let b=20;
 console.log("Hi , This is the demo of sync and async functions in JavaScript");
@@ -20,18 +11,15 @@ setTimeout(()=>{
 // file reading operation
 
 fs.readFile("./sum.js", "utf-8", (err, data) => {
-    console.log("File Data read successsfully");
+    console.log("File Data;",data);
 });
 
 // sync function
 
-function sub(x, y) {
+function subtract(x, y) {
     return x - y;
 }
 
-const result = sub(a, b);
+const result = subtract(a, b);
 
 console.log("Subtraction", result);
-
-
-
