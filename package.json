@@ -1,0 +1,24 @@
+{
+  "name": "startingnode",
+  "version": "1.0.0",
+  "description": "Node Js",
+  "homepage": "https://github.com/yannam-hema/StartingNode#readme",
+  "bugs": {
+    "url": "https://github.com/yannam-hema/StartingNode/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yannam-hema/StartingNode.git"
+  },
+  "license": "ISC",
+  "author": "yannam hema",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "mongodb": "^6.19.0"
+  }
+}
