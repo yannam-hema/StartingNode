@@ -2,7 +2,7 @@
 //importing MongoClient form Mongodb package
 const {MongoClient}=require("mongodb");
 //connection url
-const URI="mongodb+srv://yannamhema30:oqjQfo1e80BXovkI@namastenodejscourse.khfnerj.mongodb.net/";
+const URI="mongodb+srv://yannamhema30:pTmfjgdVwfM0Ahid@namastenodejscourse.khfnerj.mongodb.net/";
 //creating a new ckient
 const client = new MongoClient(URI);
 //creating a database name
