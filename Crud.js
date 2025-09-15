@@ -7,10 +7,12 @@ async function crudOP(){
     console.log("connected to CRUD DB successfully");
     const db=client.db(dbname);
     const collection=db.collection("Friends");
-    console.log(collection);
+
+    //console.log(collection);
     // //To insert a single document
     // const insertedOne=await collection.insertOne({name:"Ruchi",surName:"P",city:"Giddalur"});
     // console.log("document inserted" , insertedOne);
+    //
     // //To insert multiple documents
     // const insertedMany =await collection.insertMany([
     //     {name:"Rachana",surName:"Vankala",city:"Srikakulam"},
@@ -18,15 +20,23 @@ async function crudOP(){
     //     {name:"Priya",surName:"ch",city:"Giddalur"}
     // ]);
     // console.log("multiple documents inserted" , insertedMany);
+  
+    // const InOperation =  await collection.find({city:{$in:["Giddalur","Mysore"]}}).toArray();
+    // console.log("documents =>"+InOperation);
+
+    //UpdateOne document
+    // const UpdateOp= await collection.updateOne({name:"Ruchi"},{$set:{city:"GID"}})
+    // console.log("Updated document =>", UpdateOp);
+
 
     // //to Find Documents
-    // const findDocuments=await collection.find({}).toArray();
-    // console.log("Found documents =>", findDocuments);
-    // return "done";
+    const findDocuments=await collection.find({}).toArray();
+    console.log("Found documents =>", findDocuments);
 
     //to Find documents with a condition
-    const FindDocumentsOfGiddalurCity = await collection.find({city:"Giddalur"}).toArray();
-    console.log("Found documents of Giddalur city =>", FindDocumentsOfGiddalurCity);
+    // const FindDocumentsOfGiddalurCity = await collection.find({city:"Giddalur"}).toArray();
+    // console.log("Found documents of Giddalur city =>", FindDocumentsOfGiddalurCity);
+    return "done";
 }
 
 crudOP().then((res)=>{
